@@ -267,44 +267,44 @@
 #     answer3=input("Is the number 6? ")
 # if answer3=='higher':
 #     answer4=input("Is the number 18? ")
-#################################################################
-# def SearchFile():
-#     user_start_date ='11/02/21' #input('What date would you like to start your query from? (Format: MM/DD/YY)')
-#     user_end_date ='11/04/21' #input('What date would you like to end your query at? (Format: MM/DD/YY)')
-#     if len(user_start_date) != 8 or len(user_end_date) != 8:
-#         print("Incorrect date format")
-#         SearchFile()
-#     start_month = user_start_date[0:2]  # MM START
-#     start_month = start_month.zfill(2)  # Makes sure MM is 2 digits i.e '02'
-#     start_day = user_start_date[3:5]  # DD START
-#     start_year = user_start_date[6:8]  # YY START
-#     start_year = start_year.zfill(2)  # Makes sure YY is 2 digits i.e '02'
-#     end_month = user_end_date[0:2]  # MM END
-#     end_day = user_end_date[3:5]  # DD END
-#     end_year = user_end_date[6:8]  # YY END
-#     days = range((int(start_day)), (int(end_day)+1))
-#     list_of_days = []
-#     for i in days:
-#         list_of_days.append(i)
-#     print(list_of_days)
-#     #for i in list_of_days:
-#         #no_brackets = str(list_of_days[0:99]).strip('[]')
-#     warn_level = input("What level of error to search for? (NOTICE, INFO, WARNING or CRIT)")
-#     for i in list_of_days:
-#         day=i
-#         day=str(day).zfill(2) #Makes sure DD is 2 digits i.e '02'
-#         #print(day)
-#         dates_to_look_for = start_month + '/' + str(day) + '/' + start_year
-#         #print(dates_to_look_for)
-#         log = open('log.txt')
-#         for line in log:
-#             if line.startswith(dates_to_look_for) and line.__contains__(warn_level.upper()): #.startswith(start_month+'/'+str(day)+'/'+start_year):
-#                 print(line)
-#             #else:
-#             #    print("No logs of selected level from selected date range")
-#             #    SearchFile()
-# SearchFile()
-#################################################################################
+################################################################
+def SearchFile():
+    user_start_date =input('What date would you like to start your query from? (Format: MM/DD/YY)')
+    user_end_date =input('What date would you like to end your query at? (Format: MM/DD/YY)')
+    if len(user_start_date) != 8 or len(user_end_date) != 8:
+        print("Incorrect date format")
+        SearchFile()
+    start_month = user_start_date[0:2]  # MM START
+    start_month = start_month.zfill(2)  # Makes sure MM is 2 digits i.e '02'
+    start_day = user_start_date[3:5]  # DD START
+    start_year = user_start_date[6:8]  # YY START
+    start_year = start_year.zfill(2)  # Makes sure YY is 2 digits i.e '02'
+    end_month = user_end_date[0:2]  # MM END
+    end_day = user_end_date[3:5]  # DD END
+    end_year = user_end_date[6:8]  # YY END
+    days = range((int(start_day)), (int(end_day)+1))
+    list_of_days = []
+    for i in days:
+        list_of_days.append(i)
+    #print(list_of_days)
+    #for i in list_of_days:
+        #no_brackets = str(list_of_days[0:99]).strip('[]')
+    warn_level = input("What level of error to search for? (NOTICE, INFO, WARNING or CRIT)")
+    for i in list_of_days:
+        day=i
+        day=str(day).zfill(2) #Makes sure DD is 2 digits i.e '02'
+        #print(day)
+        dates_to_look_for = start_month + '/' + str(day) + '/' + start_year
+        #print(dates_to_look_for)
+        log = open('log.txt')
+        for line in log:
+            if line.startswith(dates_to_look_for) and line.__contains__(warn_level.upper()): #.startswith(start_month+'/'+str(day)+'/'+start_year):
+                print(line)
+            #else:
+            #    print("No logs of selected level from selected date range")
+            #    SearchFile()
+SearchFile()
+################################################################################
 
 
 

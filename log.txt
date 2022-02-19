@@ -1,0 +1,12 @@
+11/02/21 - WARNING: SSH disabled
+11/02/21 - CRIT: CPU overheat
+11/02/21 - NOTICE: RAM usage above 70%
+11/02/21 - INFO: Network slow
+11/03/21 - WARNING: Too many failed root logins
+11/03/21 - CRIT: RAM amount dropped abruptly
+11/03/21 - NOTICE: High amount of users logged in
+11/03/21 - INFO: CDROM0 mounted to multiple locations
+11/04/21 - WARNING: Log files usage at 90%
+11/04/21 - CRIT: GPU shutoff due to heat
+11/04/21 - NOTICE: Mounted device '/mnt' not responding
+11/04/21 - INFO: Logged out all users for planned shutdown
