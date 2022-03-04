@@ -10,7 +10,7 @@ def start():
             break
 
 
-    print("random number (for testing)" + str(num))
+    print("random number (for testing, comment out before release)" + str(num))
     print("Welcome to my Cows and Bulls game! Try to guess the number I'm thinking of. If you guess the correct number in the correct spot ")
     print("you'll get 1 Bull. If you guess an incorrect number, or the correct number in the wrong spot, you'll get a Cow. Good luck!")
     print("(Press CTRL + C to quit at any time)")
