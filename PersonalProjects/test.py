@@ -6,17 +6,17 @@ height = [488,8584,8144,7414,6649,3463,3453,8665,8006,1313,3815,7404,6969,7759,3
 # height=[1,8,6,2,5,4,8,3,7] #answer=49
 height=[2,3,4,5,18,17,6] #answer=17
 displacement=0
-
+count=0
 reversal=reversed(range(len(height)))
-print(len(height))
 
-for i in range(len(height)):
-    print("i=", i)
-    for x in reversal:
-        print(min(height[x],height[i]), x, "-", i, )
-        if min(height[x],height[i]) * abs(x-i) > displacement:
-            displacement=min(height[x],height[i]) * abs(x-i)
-        #height.pop(0)
+
+while len(height)>0:
+    vars=height[0],height[-1]
+    print(vars)
+    disp=min(vars)*(len(height)-1)
+    print(disp)
+    if disp > displacement:
+        displacement=disp
+    height.pop(0)
 print(displacement)
-
-
+print(count)

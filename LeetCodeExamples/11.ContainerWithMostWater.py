@@ -7,7 +7,9 @@ displacement=0
 max_displacement=0
 count=0
 for location, value in enumerate(height):
+    #print(location, value)
     for i in range(len(height)):
         if height[i]>=value and value*abs(i-location)>displacement:
-            displacement=value*abs(i-location)
+            #print(min(height[i],value), i, "-", i, )
+            displacement=min(height[i],value)*abs(i-location)
 print(displacement)
