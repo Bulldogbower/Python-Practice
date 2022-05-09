@@ -6,8 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 import sys
 
-chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
+
 #driver = webdriver.Chrome(executable_path=".\chromedriver.exe")#,options=chrome_options)
 
 def SearchCriteria():
@@ -27,6 +26,8 @@ def SearchCriteria():
 
 
 def LaunchBrowser(parts_list,w,z):
+    chrome_options = Options()
+    chrome_options.add_experimental_option("detach", True)
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get("https://partsurfer.hpe.com/search.aspx")
     #driver.maximize_window()
@@ -39,29 +40,27 @@ def LaunchBrowser(parts_list,w,z):
 
 def Search(driver,parts_list,w,z,):
     for i in parts_list:
-        if i == parts_list[0]+500:
-            #print("trying to restart")
-            #print(parts_list[0],parts_list[-1])
-            driver.quit()
-            x=parts_list[0]+500
-            y=parts_list[-1]
-            parts_list=range(int(x),int(y))
-            #print(parts_list[0],parts_list[-1])
-            LaunchBrowser(parts_list,w,z)
-        #print(driver.session_id)
-        #print("Here2")
-        #print("P",i)
-        elem = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')  # Find the search box
-        elem.send_keys(Keys.CONTROL,"A")
-        elem.send_keys(Keys.DELETE)
-        elem.send_keys(w,i,z)
-        elem.send_keys(Keys.RETURN)
-        #time.sleep(3)
         try:
-            desc = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_gvGeneral_ctl02_lblpartdesc1').text  # Find the Column for last comment date
-            print(w,i,z, ";", desc)
+            driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
+        except:
+            driver.get("https://partsurfer.hpe.com/search.aspx")
+
+        try:
+            elem = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')  # Find the search box
+            elem.send_keys(Keys.CONTROL,"A")
+            elem.send_keys(Keys.DELETE)
+            elem.send_keys(w,i,z)
+            elem.send_keys(Keys.RETURN)
         except:
             pass
+
+        time.sleep(1)
+#Below finds the definition for the part number
+        try:
+            desc = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_gvGeneral_ctl02_lblpartdesc1').text  # Try to find the part description
+            print(w,i,z, " ; ", desc,sep="")
+        except:
+            pass                                                                                                # If no description field, it continues on
     print("Search Complete")
 
 
