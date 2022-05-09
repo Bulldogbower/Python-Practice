@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
@@ -10,17 +11,21 @@ import sys
 #driver = webdriver.Chrome(executable_path=".\chromedriver.exe")#,options=chrome_options)
 
 def SearchCriteria():
-    # q1=input("Does the Part have a letter in front?(y/n) ")
-    # if q1=="y":
-    w="P"#input("Letter Before PN ")
+    q1=input("Does the Part have a letter in front?(y/n) ")         # P30906
+    if q1=="y":
+        w=input("Letter Before PN: ")
+    else:
+        w=None
 
-    # q2=input("Does the Part have a unique ending (i.e '-001')?(y/n) ")
-    # if q2=="y":
-    z="-001"#input("Enter ending ")
+    q2=input("Does the Part have a unique ending (i.e '-001')?(y/n) ") # P30906-001
+    if q2=="y":
+        z=input("Enter ending: ")
+    else:
+        z=None
 
-    x=input("Lower limit for PN")
-    y=input("Upper limit for PN")
-    parts_list=range(int(x),int(y)) #(10000,99999)
+    x=input("Lower limit for PN: ")
+    y=input("Upper limit for PN: ")
+    parts_list=range(int(x),(int(y)+1)) # P[10000]-001 to P[99999]-001
     LaunchBrowser(parts_list,w,z)
 
 
@@ -32,7 +37,7 @@ def LaunchBrowser(parts_list,w,z):
     driver.get("https://partsurfer.hpe.com/search.aspx")
     #driver.maximize_window()
     #print("here")
-    location=driver.find_element_by_id("ctl00_BodyContentPlaceHolder_ddlCountry")
+    location=driver.find_element_by_id("ctl00_BodyContentPlaceHolder_ddlCountry")               # Find country selection
     location.send_keys("united states")
     location.send_keys(Keys.RETURN)
     #time.sleep(2)
@@ -47,9 +52,12 @@ def Search(driver,parts_list,w,z,):
 
         try:
             elem = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')  # Find the search box
-            elem.send_keys(Keys.CONTROL,"A")
+            elem.send_keys(Keys.COMMAND,"A")
             elem.send_keys(Keys.DELETE)
-            elem.send_keys(w,i,z)
+            if w and z !=None:                                                                    # If w and z are defined, send w,i,z. Else: send i
+                elem.send_keys(w,i,z)
+            else:
+                elem.send_keys(i)
             elem.send_keys(Keys.RETURN)
         except:
             pass
