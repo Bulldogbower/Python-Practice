@@ -1,0 +1,274 @@
+Does the Part have a letter in front?(y/n) Letter Before PN Does the Part have a unique ending (i.e '-001')?(y/n) Enter ending Lower limit for PNUpper limit for PNJL114-61001 ; HPE 6940-32Q PPC O AC Front-to-Back Switch
+JL115-61001 ; Cloudline 6700-32Q PPC O AC B-F Switch
+JL116-61001 ; HPE 5600-48X-4Q PPC O AC Front-to-Back Switch
+JL117-61001 ; HPE 5600-48X-4Q PPC O AC Back-to-Front Switch
+JL118-61001 ; HPE 400W AC Front-to-Back Power Supply
+JL119-61001 ; HPE 400W AC Back-to-Front Power Supply
+JL120-61001 ; HPE 6940 Front-to-Back Fan Tray
+JL121-61001 ; Cloudline 6700 Back-to-Front Fan Tray
+JL122-61001 ; HPE 5600 Front-to-Back Fan Tray
+JL123-61001 ; HPE 5600 Back-to-Front Fan Tray
+JL124-61001 ; HPE 6940 6QSFP+ Module
+JL165-61001 ; HPE Altoline 6940 32QSPF+ x86 ONIE AC Front-to-Back Switch
+JL166-61001 ; HPE Altoline 6940 32QSFP+ x86 ONIE AC Back-to-Front Switch
+JL167-61001 ; HPE Altoline 6920 48XG 6QSFP+ x86 ONIE AC Front-to-Back Switch
+JL168-61001 ; HPE Altoline 6920 48XG 6QSFP+ x86 ONIE AC Back-to-Front Switch
+JL169-61001 ; 1850 6xGT 2xGT/small form factor pluggable (SFP+) switch
+JL170-61001 ; 1850 24G 2xGT switch
+JL171-61001 ; 1850 48G 4xGT switch
+JL172-61001 ; 1850 24G 2XGT power over Ethernet (PoE+) 185Watt switch
+JL173-61001 ; 1850 48G 4XGT power over Ethernet (PoE+) 370W switch
+JL192-61001 ; SU,Indoor Omni 2/4dBi MIMO 8 Elmnt Ant
+JL193-61001 ; SU,Outdoor Sector 7/7dBi MIMO 4 Elmt Ant
+JL194-61001 ; SU,Outdoor P2P 10/13dBi MIMO 4 Elmnt Ant
+JL195-61001 ; SU,Outdoor Omni 4/6dBi MIMO 4 Elmnt Ant
+JL196-61001 ; SU,Outdoor Stadium 7/9dBi 4 Elmnt Ant
+JL197-61001 ; Altoline Gen1 Rack mount Kit
+JL198-61001 ; Altoline Gen2 Rack Mount Kit
+JL223-61001 ; HPE Altoline 6900 48G 4XG 2QSFP ARM ONIE AC Front-to-Back Switch
+JL228-61001 ; Altoline Gen3 Rack Mount Kit
+JL240-61001 ; X120 1G SFP LC SX (US) Transceiver
+JL241-61001 ; X130 10G SFP+ LC SR (US) Transceiver
+JL242-61001 ; X130 10G SFP+ LC LR (US) Transceiver
+JL243-61001 ; X240 10G SFP+ SFP+ 1.2m (US) DAC Cable
+JL244-61001 ; X240 10G SFP+ SFP+ 3m (US) DAC Cable
+JL245-61001 ; X240 40G quad small form pluggable (QSFP+) QSFP+ , 1m (3.28ft) directly attached cable (DAC) cable
+JL246-61001 ; X240 40G quad small form pluggable (QSFP+) QSFP+ , 3m (9.84ft) long directly attached cable (DAC) cable
+JL247-61001 ; X240 40G quad small form pluggable (QSFP+) QSFP+ , 5m (16.4ft) directly attached cable (DAC) cable
+JL248-61001 ; X240 quad small form factor pluggable (QSFP+) 4x10G SFP+ 3m (9.84ft) long directly attached cable (DAC) cable
+JL250-61001 ; X130 10G SFP+ LC LH80 tunable transceiver - Small Form-factor Pluggable Plus (SFP+) 10-Gigabit LH standard, with 1528.773nm to 1566.723nm laser that provides a 10-Gigabit connectivity up to 80km (49.7 miles) on single-mode fiber - Has one LC 10-GbE port
+JL251-61001 ; X140 40G QSFP+ LC BiDi 100m MM transceiver - Quad Small Form-factor Pluggable Plus (QSFP+) bi-directional 4X 10-Gigabit Ethernet, 850nm laser that provides 40-Gigabit connectivity up to 100m (328ft) on multimode fibers - Has one LC port
+JL253-61001 ; 2930F 24G 4SFP+ Switch - Includes 24 RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb (100-FX), 1Gb (SFP), and 10Gb (SFP+) transceivers
+JL254-61001 ; 2930F 48G 4SFP+ Switch - Includes 48 RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb (100-FX), 1Gb (SFP), and 10Gb (SFP+) transceivers
+JL255-61001 ; 2930F 24G PoE+ 4SFP+ Switch - Includes 24 Power over Ethernet Plus RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb, 1Gb, and 10Gb transceivers
+JL256-61001 ; 2930F 48G PoE+ 4SFP+ Switch - Includes 48 Power over Ethernet Plus RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb, 1Gb, and 10Gb transceivers
+JL258-61001 ; 2930F 8G 2SFP+ switch - Includes eight RJ45 10/100/1000Mb autosensing ports, two 1G/10G Small Form-factor Pluggable Plus (SFP) ports, RJ45 / mini-USB console port, and DC receptacle - Accepts 100Mb (100-FX), 1Gb (SFP), and 10Gb (SFP+) transceivers
+JL259-61001 ; 2930F 24G 4SFP Switch - Includes 24 RJ45 10/100/1000Mb autosensing ports, four 1G Small Form-factor Pluggable (SFP) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb (100-FX) and 1Gb (SFP) transceivers
+JL260-61001 ; 2930F 48G 4SFP Switch - Includes 48 RJ45 10/100/1000Mb autosensing ports, four 1G Small Form-factor Pluggable (SFP) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb (100-FX) and 1Gb (SFP) transceivers
+JL261-61001 ; 2930F 24G PoE+ 4SFP Switch - Includes 24 Power over Ethernet Plus (PoE+) RJ45 10/100/1000Mb autosensing ports, four 1G Small Form-factor Pluggable (SFP) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb and 1Gb transceivers
+JL262-61001 ; 2930F 48G PoE+ 4SFP Switch - Includes 48 Power over Ethernet Plus (PoE+) RJ45 10/100/1000Mb autosensing ports, four 1G Small Form-factor Pluggable (SFP) ports, RJ45 / mini-USB console port, and AC receptacle - Accepts 100Mb and 1Gb transceivers
+JL263-61001 ; 2930F 24G PoE+ 4SFP+ TAA Switch - Includes 24 Power over Ethernet Plus (PoE+) RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / mini-USB console port, and AC receptacle - TAA compliant
+JL264-61001 ; 2930F 48G PoE+ 4SFP+ TAA Switch - Includes 48 Power over Ethernet Plus (PoE+) RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / mini-USB console port, and AC receptacle - TAA compliant
+JL271-61001 ; X240 100Gb QSFP28 to QSFP28 1.0m (3.28ft) Direct Attach Copper cable - 4X 28-Gigabit Ethernet, 100 Ohm cable with Quad Small Form-factor Pluggable 28 (QSFP28) connectors permanently attached to each end
+JL272-61001 ; X240 100Gb QSFP28 to QSFP28 3.0m (9.84ft) Direct Attach Copper cable - 4X 28-Gigabit Ethernet, 100 Ohm cable with Quad Small Form-factor Pluggable 28 (QSFP28) connectors permanently attached to each end
+JL273-61001 ; X240 100Gb QSFP28 to QSFP28 5.0m (16.4ft) Direct Attach Copper cable - 4X 28-Gigabit Ethernet, 100 Ohm cable with Quad Small Form-factor Pluggable 28 (QSFP28) connectors permanently attached to each end
+JL274-61001 ; X150 100G QSFP28 SR4 100m MM transceiver - Quad Small Form-factor Pluggable 28 (QSFP28) 4X 28-Gigabit SR4 standard, 850nm laser for 100-Gigabit connectivity up to 100m (328ft) on multimode fibers - Has one Multiple-fiber Push-On (MPO) SR4 connector
+JL275-61001 ; X150 100G QSFP28 LR4 10km SM transceiver - Quad Small Form-factor Pluggable 28 (QSFP28) 4X 28-Gigabit LR4 standard, 1294-1310nm lasers for 100-Gigabit connectivity up to 10km (6.21 miles) on single-mode fibers - Has one LC 100-GbE port
+JL276-61001 ; X2A0 100GbE QSFP28 7m Active Optical Cable (AOC) assembly - 7m (23.0ft) long fiber optical cable with active Quad Small Form-factor Pluggable 28 (QSFP28) transceivers permanently attached to each end - Provides 100 Gigabit connectivity
+JL277-61001 ; X2A0 100GbE QSFP28 10m Active Optical Cable (AOC) assembly - 10m (32.8ft) long fiber optical cable with active Quad Small Form-factor Pluggable 28 (QSFP28) transceivers permanently attached to each end - Provides 100 Gigabit connectivity
+JL278-61001 ; X2A0 100GbE QSFP28 20m Active Optical Cable (AOC) assembly - 20m (65.6ft) long fiber optical cable with active Quad Small Form-factor Pluggable 28 (QSFP28) transceivers permanently attached to each end - Provides 100 Gigabit connectivity
+JL279-61001 ; HPE Altoline 6960 32QSFP28 x86 ONIE AC Front-to-Back Switch
+JL280-61001 ; HPE Altoline 6960 32QSFP28 x86 ONIE AC Back-to-Front Switch
+JL282-61001 ; X240 QSFP28 to 4x SFP28 1.0m (3.28ft) long Direct Attach Copper cable - 100-Gigabit Quad Small Form-factor Pluggable 28 (QSFP28) connector to four 25-Gigabit cables with Small Form-factor Pluggable 28 (SFP28) connectors on the end ;
+JL283-61001 ; X240 QSFP28 to 4x SFP28 3.0m (9.84ft) long Direct Attach Copper cable - 100-Gigabit Quad Small Form-factor Pluggable 28 (QSFP28) connector to four 25-Gigabit cables with Small Form-factor Pluggable 28 (SFP28) connectors on the end ;
+JL284-61001 ; X240 QSFP28 to 4x SFP28 5.0m (16.4ft) long Direct Attach Copper cable - 100-Gigabit Quad Small Form-factor Pluggable 28 (QSFP28) connector to four 25-Gigabit cables with Small Form-factor Pluggable 28 (SFP28) connectors on the end ;
+JL286-61001 ; X140 40G QSFP+ LC LR4L SM transceiver - Quad Small Form-factor Pluggable Plus (QSFP+) 4X 10-Gigabit with 1271nm, 1291nm, 1311nm, and 1331nm lasers providing 40-Gigabit connectivity up to 2km (1.24 miles) on single-mode fiber - Has one LC LR4L 40-Gb port
+JL287-61001 ; X2A0 40GbE QSFP+ 7m Active Optical Cable (AOC) assembly - 7m (23.0ft) long fiber optical cable with active Quad Small Form-factor Pluggable Plus (QSFP+) transceivers permanently attached to each end - Provides 40 Gigabit connectivity
+JL288-61001 ; X2A0 40GbE QSFP+ 10m Active Optical Cable (AOC) assembly - 10m (32.8ft) long fiber optical cable with active Quad Small Form-factor Pluggable Plus (QSFP+) transceivers permanently attached to each end - Provides 40 Gigabit connectivity
+JL289-61001 ; X2A0 40GbE QSFP+ 20m Active Optical Cable (AOC) assembly - 20m (65.6ft) long fiber optical cable with active Quad Small Form-factor Pluggable Plus (QSFP+) transceivers permanently attached to each end - Provides 40 Gigabit connectivity
+JL290-61001 ; X2A0 10GbE SFP+ 7m Active Optical Cable (AOC) assembly - 7m (23.0ft) long fiber optical cable with active Small Form-factor Pluggable Plus (SFP+) transceivers permanently attached to each end - Provides 10 Gigabit connectivity
+JL291-61001 ; X2A0 10GbE SFP+ 10m Active Optical Cable (AOC) assembly - 10m (32.8ft) long fiber optical cable with active Small Form-factor Pluggable Plus (SFP+) transceivers permanently attached to each end - Provides 10 Gigabit connectivity
+JL292-61001 ; X2A0 10GbE SFP+ 20m Active Optical Cable (AOC) assembly - 20m (65.6ft) long fiber optical cable with active Small Form-factor Pluggable Plus (SFP+) transceivers permanently attached to each end - Provides 10 Gigabit connectivity
+JL293-61001 ; X190 25G small form factor pluggable (SFP28) Lucent connector (LC) short range SR 100m MM transceiver
+JL294-61001 ; X240 25GbE SFP28 to SFP28 1.0m (3.28ft) Direct Attach Copper (DAC) cable - 25 Gigabit Ethernet, 100 Ohm cable with Small Form-factor Pluggable 28 (SFP28) connectors permanently attached to each end
+JL295-61001 ; X240 25GbE SFP28 to SFP28 3.0m (9.84ft) Direct Attach Copper (DAC) Cable - 25 Gigabit Ethernet, 100 Ohm cable with Small Form-factor Pluggable 28 (SFP28) connectors permanently attached to each end
+JL296-61001 ; X240 25G SFP28 to SFP28 5m Direct Attached Cable (DAC)
+JL297-61001 ; X2A0 25G SFP28 7m AOC Cable
+JL298-61001 ; X2A0 25G SFP28 10m AOC Cable
+JL299-61001 ; X2A0 25G SFP28 20m AOC Cable
+JL306-61001 ; X140 40G QSFP+ LC ER4 SM transceiver - Quad Small Form-factor Pluggable Plus (QSFP+) 4X 10-Gigabit with 1271nm, 1291nm, 1311nm, and 1331nm lasers providing 40-Gigabit connectivity up to 40km (24.9 miles) on single-mode fiber - Has one LC ER4 40-Gb port
+JL307-61001 ; Aruba 100G quad small form factor pluggable (QSFP28-QSFP28) 5m (16.4ft) long, direct attach cables (DAC) cable
+JL308-61001 ; Aruba 40G quad small form factor pluggable (QSFP+) Lucent connector (LC) Bidirectional 150m multi mode fiber (MMF) 2-strand transceiver
+JL309-61001 ; 100G quad small form factor pluggable (QSFP28) MPO (Multi-fiber Push On) SR4 multi mode fiber (MMF) transceiver
+JL310-61001 ; Aruba 100G quad small form factor pluggable (QSFP28) lucent connector (LC) LR4 10km SMF 2-strand transceiver
+JL311-61001 ; Aruba 2930F 8-port cable guard kit - Includes two brackets for mounting the switch under a table or on a wall and a front mounted cable guard to provide extra security against theft or tampering with the switch and its cables after it is installed
+JL312-61001 ; Aruba 2930F 8-port power supply shelf - Mounts to the rear of the switch and provides a shelf for attaching the external power adapter
+JL313-61001 ; HPE Altoline 6941 32QSFP+ x86 ONIE AC Front-to-Back Switch
+JL314-61001 ; HPE Altoline 6941 32QSFP+ x86 ONIE AC Back-to-Front Switch
+JL315-61001 ; HPE Altoline 6921 48XGT 6QSFP+ x86 ONIE AC Front-to-Back Switch
+JL316-61001 ; HPE Altoline 6921 48XGT 6QSFP+ x86 ONIE AC Back-to-Front Switch
+JL317-61001 ; HPE Altoline 6921 48SFP+ 6QSFP+ x86 ONIE AC Front-to-Back Switch
+JL318-61001 ; HPE Altoline 6921 48SFP+ 6QSFP+ x86 ONIE AC Back-to-Front Switch
+JL319-61001 ; 2930M 24G 1-slot Switch
+JL320-61001 ; 2930M 24G PoE+ with 1-slot Switch
+JL321-61001 ; 2930M 48G with 1-slot Switch
+JL322-61001 ; 2930M 48G PoE+ 1-slot Switch
+JL323-61001 ; 2930M 40G - 36-10/100/1000 ports,802.3u Type 100BASETX,Duplex10BASE-T/100BASE-TX:half/full, 1000BASE-T:full only,4 - Combo 10/100/1000BASE-T PoE+ or 100/1000Mbps SFP Ports, 8 - 802.3bz 1/2.5/5 and 10GbaseT copper PoE+ ports
+JL324-61001 ; Aruba 2930M 24 Power over Ethernet (PoE+) 1-slot Switch - 24 Autosensing 1/2.5/5GBaseT ports power over Ethernet (PoE+)
+JL325-61001 ; 2930 2-port Stacking Module
+JL354-61001 ; 2540 24G 4SFP+ Switch - Includes 24 RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / micro-USB console port, and AC receptacle - Accepts 100Mb (100-FX), 1Gb (SFP), and 10Gb (SFP+) transceivers
+JL355-61001 ; 2540 48G 4SFP+ Switch - Includes 48 RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus (SFP+) ports, RJ45 / micro-USB console port, and AC receptacle - Accepts 100Mb (100-FX), 1Gb (SFP), and 10Gb (SFP+) transceivers
+JL356-61001 ; 2540 24G PoE+ 4SFP+ Switch - Includes 24 Power over Ethernet Plus RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus ports, RJ45 / micro-USB console port, and AC receptacle - Accepts 100Mb, 1Gb, and 10Gb transceivers
+JL357-61001 ; 2540 48G PoE+ 4SFP+ Switch - Includes 48 Power over Ethernet Plus RJ45 10/100/1000Mb autosensing ports, four 1G/10G Small Form-factor Pluggable Plus ports, RJ45 / micro-USB console port, and AC receptacle - Accepts 100Mb, 1Gb, and 10Gb transceivers
+JL363-61001 ; 20K 32P 10G SFP/SFP+ Msec Advance Module
+JL365-61001 ; 20K 8P 40G QSFP+ Advance Module
+JL366-61001 ; 20K 6P 40G/100G QSFP28 Advance Module
+JL367-61001 ; 20K 7.2Tbps Fab Module
+JL368-61001 ; SU, 20K Management Module
+JL369-61001 ; 20K Fan Tray
+JL370-61001 ; 20K Fan for Fan Tray
+JL372-61001 ; 20K 54VDC 2750W AC Power Supply
+JL373-61001 ; 20K Four Post Rack Kit
+JL374-61001 ; 20K Two Post Rack Kit
+JL375-61001 ; 8-slot FDC/RDC Bundle
+JL379-61001 ; HPE NSG TM200 6-Port Gigabit Ethernet Gateway
+JL380-61001 ; 1920S 8G switch - 8-RJ-45 autosensing 10/100/1000 ports
+JL381-61001 ; 1920S 24G 2-SFP switch - 24 RJ-45 autosensing 10/100/1000 ports, 2 small form factor pluggable (SFP) 100/1000 Mbps ports
+JL382-61001 ; 1920S 48G 4-SFP switch - 48- RJ-45 autosensing 10/100/1000 ports, 4- small form factor pluggable (SFP) 100/1000 Mbps ports
+JL383-61001 ; 920S 8G PPoE+ 65W switch - 4- RJ-45 autosensing 10/100/1000 PoE+ ports, 4- RJ-45 autosensing 10/100/1000 ports
+JL384-61001 ; 1920S 24G 2SFP PPoE+ 185W Switch - 12 RJ-45 autosensing 10/100/1000 PoE+ ports,12 RJ-45 autosensing 10/100/1000 ports, 2-SFP (small form factor pluggable) 100/1000Mbps ports
+JL385-61001 ; 1920S 24G 2-small form factor pluggable (SFP) Power over Ethernet (PoE+) 370W switch - Layer 3 static routing, network segmentation, Spanning Tree Protocol (STP, RSTP, and MSTP)
+JL386-61001 ; 1920S 48G 4SFP PPoE+ 370W Switch - 24 RJ-45 autosensing 10/100/1000 PoE+ ports, 24- RJ-45 autosensing 10/100/1000 ports,4-SFP 100/1000 Mbps ports
+JL420-61001 ; SP, X150 100G QSFP28 PSM4 500m SM XCVR
+JL440-61001 ; HPE Altoline Type 3 Fan Tray AC Power Supply and Rack Mount Front-to-Back Kit
+JL441-61001 ; HPE Altoline Type 3 Fan Tray AC Power Supply and Rack Mount Back-to-Front Kit
+JL442-61001 ; HPE Altoline 6822 48XG 6QSFP28 x86 ONIE Switch
+JL443-61001 ; HPE Altoline Type 3 Fan Tray DC Power Supply and Rack Mount Front-to-Back Kit
+JL444-61001 ; HPE Altoline Type 3 Fan Tray DC Power Supply and Rack Mount Back-to-Front Kit
+JL473-61001 ; HPE AL 6900 48G 4X 2Q O AC BF Switch
+JL474-61001 ; SP, HPE AL 6900 48G 4X 2Q O DC FB Switch
+JL475-61001 ; HPE AL 6900 48G 4X 2Q O DC BF Switch
+JL479-61001 ; 8320 48 port 10G/6 port 40G Switch
+Part JL479-61001 is no longer supplied. Please order the replacement, JL479-61101
+JL480-61001 ; X371 400W AC Power Supply
+JL481-61001 ; X721 Front-to-Back Fan
+JL482-61001 ; X472 2-post Rack Kit
+JL483-61001 ; X474 4-post Rack Kit
+JL484-61001 ; Aruba 25GBase SFP28 (Small Form-factor Pluggable) LC (Lucent Connectors) SR (Short Reach) 100 m MMF (Multimode Fiber) Transceiver
+JL485-61001 ; Aruba 25GBase SFP28 (Small Form-factor Pluggable) LC (Lucent Connectors) eSR 400 m MMF (Multimode Fiber) Transceiver
+JL486-61001 ; Aruba 25GBase SFP28 (Small Form-factor Pluggable) LC (Lucent Connectors) LR (Long Reach) 10 km SMF (Single-mode Fiber) Transceiver
+JL487-61001 ; 25G SFP28 to SFP28 0.65m DAC Cable
+JL488-61001 ; 25G SFP28 to SFP28 3m DAC Cable
+JL489-61001 ; 25G SFP28 to SFP28 5m DAC Cable
+JL518-61001 ; SU, Aruba 8320 48 T/6 40 X472 5 2 Bdl
+JL557-61001 ; 2930F 48G PoE+ 4SFP 740W Switch Support kit
+JL558-61001 ; 2930F 48G PoE+ 4SFP+ 740W Switch Support kit
+JL559-61001 ; 2930F 48G PoE+ 4SFP+ 740W TAA Support kit
+JL563-61001 ; 10GBASE-T Small Form-Factor Pluggable Plus (SFP+) copper Transceiver (XCVR) RJ45 connector cable - Transmission distance of 30 m (98.43 ft), data rate of 10G, Cat6A UTP/STP cable type
+JL579-61001 ; Aruba 8320 32 40G X472 5 2 Switch
+JL581-61001 ; Aruba 8320 48-ports 1G/10GBASE-T and 6-port 40G QSFP+ with X472 5 Fans 2 Power Supply Switch Bundle
+JL582-61001 ; HPE 1920S 8G 2SFP PoE+ 185W Switch
+JL583-61001 ; HPE 1920S 24G 2SFP PoE+ 185W Swch
+JL584-61001 ; HPE 1920S 48G 4SFP PoE+ 370W Swch
+JL585-61001 ; HPE FlexFabric 5710 48SFP+ (Small Form Factor Pluggable Plus) 6QSFP+ (Quad SFP+) or 2QSFP28 Switch
+JL586-61001 ; HPE FlexFabric 5710 48XGT 6QSFP+ (Quad Small Form Factor Pluggable Plus) or 2QSFP28 Switch
+JL587-61001 ; HPE FlexFabric 5710 24SFP+ (Small Form Factor Pluggable Plus) 6QSFP+ (Quad SFP+) or 2QSFP28 Switch
+JL589-61001 ; HPE FlexFabric 5710 250 Watt Front-to-Back (FB) AC power supply unit
+JL590-61001 ; HPE FlexFabric 5710 250 Watt Back-to-Front AC Power Supply Unit (PSU)
+JL592-61001 ; HPE FlexFabric 5710 450 Watt Front-to-Back (FB) AC Power supply Unit (PSU)
+JL593-61001 ; HPE FlexFabric 5710 450 Watt Back-to-Front (BF) AC Power Supply Unit (PSU)
+JL594-61001 ; HPE FlexFabric X721 Front-to-Back (FB) Fan Tray
+JL595-61001 ; HPE FlexFabric X722 Back-to-Front (BF) Fan Tray
+JL600-61001 ; SU, X391 550W Prt2Pwr AC PSU
+JL601-61001 ; SU X391 850W AC Power Supply
+JL602-61001 ; SU, X412 1U Universal 2-post RM Kit
+JL628-61001 ; 8325-48Y8C Front-to-Back Fan
+JL629-61001 ; 8325-48Y8C Back-to-Front Fan
+JL630-61001 ; 8325-32C Front-to-Back Fan
+JL631-61001 ; 8325-32C Back-to-Front Fan
+JL632-61001 ; 8325 650W 100-240VAC FB, Power Supply Unit (PSU)
+JL633-61001 ; 8325 650W 100-240VAC BF Power Supply Unit (PSU)
+JL635-61001 ; Aruba 8325-48Y8C 48p 25G 8p 100G Switch
+JL636-61001 ; Aruba 8325-32C 32p 100G Switch
+JL658-61001 ; 6300M 24SFP+ 4SFP56 Switch
+JL659-61001 ; 6300M 48SR5 CL6 PoE 4SFP56 Switch
+JL660-61001 ; 6300M 24SR5 CL6 PoE 4SFP56 Switch
+JL661-61001 ; 6300M 48G CL4 PoE 4SFP56 Switch
+JL662-61001 ; 6300M 24G PoE CL4 4SFP56 Switch
+JL663-61001 ; 6300M 48G 4SFP56 Switch
+JL664-61001 ; 6300M 24G 4SFP56 Switch
+JL665-61001 ; 6300F 48G CL4 PoE 4SFP56 Switch
+JL666-61001 ; 6300F 24G CL4 PoE 4SFP56 Switch
+JL667-61001 ; 6300F 48G 4SFP56 Switch
+JL668-61001 ; 6300F 24G 4SFP56 Switch
+JL669-61001 ; 6300M Fan Tray
+JL670-61001 ; X372 54VDC 1600W Power Supply
+JL675-61001 ; SU, 6100 48G CL4 4SFP+ Switch
+JL676-61001 ; SU, 6100 48G 4SFP+ Switch
+JL677-61001 ; Aruba 6100 24G Class4 PoE 4SFP+ 370W Switch
+JL678-61001 ; Y
+JL679-61001 ; SU, 6100 12G CL4 2SFP+ 139W Swch
+JL680-61001 ; Aruba IOn 1930 8G 2SFP Switch
+JL681-61001 ; Aruba IOn 1930 8G CL4 2SFP 124W Switch
+JL682-61001 ; SP, 1930-24GT-4GF Switch
+JL683-61001 ; SP, 1930-24GT-4GF 195W Switch
+JL684-61001 ; Aruba IOn 1930 24G 4SFP+ 370W Sw
+JL685-61001 ; Aruba IOn 1930 48G 4SFP+ Switch
+JL686-61001 ; Aruba IOn 1930 48G 4SFP+ 370W Sw
+JL687-61001 ; SU, 8400X-32Y Module
+JL688-61001 ; 5710 450W 48V FB DC Power Supply Unit (PSU)
+JL689-61001 ; SU, 5710 24XGT 6QS+/2QS28 Switch
+JL692-61001 ; Aruba 2930F 8G PoE+ 2SFP+ TAA-compliant Switch
+JL693-61001 ; Aruba 2930F 12G PoE+ 2G/2SFP+ Switch
+JL712-61001 ; SU, X391 550W Pwr2Prt AC PSU
+JL713-61001 ; SU, X391 850W Pwr2Prt AC PSU
+JL714-61001 ; SU, X741 FB Fan
+JL715-61001 ; SU, X742 Pwr2Prt Fan
+JL716-61001 ; SU, X544 Universal 4-post Duct Kit
+JL717-61001 ; SU, 8360-32Y4C Switch
+JL718-61001 ; SU, 8360-16Y2C Switch
+JL720-61001 ; SU, 8360-48XT4C Switch
+JL721-61001 ; SU, 8360-12C Switch
+JL722-61001 ; SU, 8360-24XF2C Switch
+JL724-61001 ; 6200F 24G 4SFP+ Switch
+JL725-61001 ; SU, 6200F 24G CL4 4SFP+370W Swch
+JL726-61001 ; Y
+JL727-61001 ; 6200F 48G CL4 4SFP+370W Switch
+JL728-61001 ; SU, 6200F 48G CL4 4SFP+740W Swch
+JL737-61001 ; HPE X130 10G SFP+ LC BiDi 10-U Transceiver
+JL738-61001 ; SU, HPE X130 10G SFP+ LC BiDi 10-D XCVR
+JL739-61001 ; SU, HPE X130 10G SFP+ LC BiDi 40-U XCVR
+JL740-61001 ; SU, HPE X130 10G SFP+ LC BiDi 40-D XCVR
+JL742-61001 ; SU, X511 12-port Cable Guard
+JL743-61001 ; SU, 100G QSFP28 LC ER4L 40km SMF XCVR
+JL745-61001 ; SU, 1G SFP LC SX 500m MMF TAA XCVR
+JL746-61001 ; SU, 1G SFP LC LX 10km SMF TAA XCVR
+JL747-61001 ; SU, 1G SFP RJ45 T 100m Cat5e TAA XCVR
+JL748-61001 ; SU, 10G SFP+ LC SR 300m MMF TAA XCVR
+JL749-61001 ; SU, 10G SFP+ LC LR 10km SMF TAA XCVR
+JL757-61001 ; SU, 6300M 250W 36-72VDC PSU
+JL758-61001 ; SU, 6300M 1050W 36-72VDC PSU
+JL760-61001 ; SU, X371 12VDC Power-to-Ports PS
+JL761-61001 ; 6300M Power-to-Ports Fan Tray
+JL762-61001 ; SU, 6300M 48G 4SFP56 Power-to-Ports Swch
+JL780-61001 ; SU, 1G I-Tmp SFP LC SX 500m MMF XCVR
+JL781-61001 ; SU, 1G I-Tmp SFP LC LX 10km SMF XCVR
+JL782-61001 ; SU, 10G I-Tmp SFP+ LC SR 300m MMF XCVR
+JL783-61001 ; SU, 10G I-Tmp SFP+ LC LR 10km SMF XCVR
+JL795-61001 ; HPE X2A0 100G QSFP28 30m AOC Cable
+JL796-61001 ; HPE X2A0 100G QSFP28 5m AOC Cable
+JL797-61001 ; SU, H3C 25G SFP28 LC LR 10km SMF Xcvr
+JL805-61001 ; Aruba IOn 1960 12XT 4XF Sw
+JL806-61001 ; Aruba IOn 1960 24G 2XT 2XF Sw
+JL807-61001 ; Aruba IOn 1960 24G 2XT 2XF 370W Sw
+JL808-61001 ; Aruba IOn 1960 48G 2XT 2XF Sw
+JL809-61001 ; Aruba IOn 1960 48G 2XT 2XF 600W Sw
+JL817-61001 ; SU, 4100i 12G CL4/6 POE 2SFP+ DIN Sw
+JL818-61001 ; SU, 4100i 24G CL4/6 POE 4SFP+ Sw
+JL819-61001 ; SU, 4000i POE 240W AC DIN PSU
+JL820-61001 ; SU, 4000i POE 480W AC DIN PSU
+JL821-61001 ; SU, 4000i POE 240W DC-DC DIN PSU
+JL822-61001 ; SU, DIN Rail 3RU 19 in Rack Mount Kit
+JL823-61001 ; SU, HPE 5140 24G POE+ 2SFP+ 2XGT EI Sw
+JL824-61001 ; SU, HPE 5140 48G PoE+ 4SFP+ EI Sw
+JL825-61001 ; SU, HPE 5140 48G POE+ 2SFP+ 2XGT EI Sw
+JL826-61001 ; HPE FlexNetwork 5140 24G SFP w/8G Combo 4SFP+ EI Switch
+JL827-61001 ; SU, HPE 5140 24G PoE+ 4SFP+ EI Sw
+JL828-61001 ; SU, HPE 5140 24G 4SFP+ EI Sw
+JL829-61001 ; SU, HPE 5140 48G 4SFP+ EI Sw
+JL836-61001 ; HPE 5944 48XGT 6QS28 Switch
+JL837-61001 ; HPE 5944 Prt2Pwr Fan Module
+JL838-61001 ; SU, 5944 Pwr2Prt Fan Module
+JL841-61001 ; SU, HPE 12904E Type X Fabric Module
+JL842-61001 ; SU, HPE 12908E Type X Fabric Module
+JL844-61001 ; HPE FlexFabric 12904E Type X Main Processing Unit
+JL845-61001 ; SU, HPE 12900E Type X MPU
+JL846-61001 ; SU, HPE 12900E 48P 10GbE SFP+ X Module
+JL847-61001 ; SU, HPE 12900E 36P 40GbE QSFP+ X Module
+JL848-61001 ; HPE FlexFabric 12900E 36-Port 100GbE QSFP28 Type X Module
+JL855-61001 ; SU, 25G SFP28 LC LR 10km SMF Xcvr
+JL856-61001 ; SU, 100G QSFP28 to QSFP28 2m AOC
+JL861-61001 ; Aruba 8325 850W 48VDC FB PSU
+JL862-61001 ; Aruba 8325 850W 48VDC BF PSU
+JL864-61001 ; SU, 5901AF 48G 4XG 2QSFP+ Switch
+Search Complete

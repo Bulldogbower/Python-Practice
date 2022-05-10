@@ -1,0 +1,1 @@
+Does the Part have a letter in front?(y/n) Letter Before PN: Does the Part have a unique ending (i.e '-001')?(y/n) Enter ending: Lower limit for PN: Upper limit for PN: 
