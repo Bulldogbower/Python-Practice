@@ -42,7 +42,7 @@ def Search(driver,parts_list,w,z,):
     for i in parts_list:
         try:
             driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
-        except:
+        except: 
             driver.get("https://partsurfer.hpe.com/search.aspx")
 
         try:
