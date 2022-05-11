@@ -45,6 +45,7 @@ def LaunchBrowser(parts_list,w,z):
 
 def Search(driver,parts_list,w,z,):
     for i in parts_list:
+        #i=str(i).zfill(7)
         try:
             driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
         except: 
@@ -52,12 +53,16 @@ def Search(driver,parts_list,w,z,):
 
         try:
             elem = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')  # Find the search box
-            elem.send_keys(Keys.COMMAND,"A")
+            elem.send_keys(Keys.CONTROL,"A")
             elem.send_keys(Keys.DELETE)
-            if w and z !=None:                                                                    # If w and z are defined, send w,i,z. Else: send i
-                elem.send_keys(w,i,z)
-            else:
+            if z==None and w!=None:
+                elem.send_keys(w,i)
+            if w==None and z!=None:                                                                    # If w and z are defined, send w,i,z. Else: send i
+                elem.send_keys(i,z)
+            if w and z ==None:
                 elem.send_keys(i)
+            else:
+                elem.send_keys(w,i,z)
             elem.send_keys(Keys.RETURN)
         except:
             pass

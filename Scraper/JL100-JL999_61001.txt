@@ -1,4 +1,5 @@
-Does the Part have a letter in front?(y/n) Letter Before PN Does the Part have a unique ending (i.e '-001')?(y/n) Enter ending Lower limit for PNUpper limit for PNJL114-61001 ; HPE 6940-32Q PPC O AC Front-to-Back Switch
+Does the Part have a letter in front?(y/n) Letter Before PN Does the Part have a unique ending (i.e '-001')?(y/n) Enter ending Lower limit for PNUpper limit for PN
+JL114-61001 ; HPE 6940-32Q PPC O AC Front-to-Back Switch
 JL115-61001 ; Cloudline 6700-32Q PPC O AC B-F Switch
 JL116-61001 ; HPE 5600-48X-4Q PPC O AC Front-to-Back Switch
 JL117-61001 ; HPE 5600-48X-4Q PPC O AC Back-to-Front Switch
