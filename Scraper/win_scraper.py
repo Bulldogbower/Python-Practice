@@ -11,26 +11,32 @@ import sys
 #driver = webdriver.Chrome(executable_path=".\chromedriver.exe")#,options=chrome_options)
 
 def SearchCriteria():
-    q1=input("Does the Part have a letter in front?(y/n) ")         # P30906
+    q1=input("Does the Part have a letter in front?(y/n) ")         # [P]30906
     if q1=="y":
         w=input("Letter Before PN: ")
     else:
         w=None
 
-    q2=input("Does the Part have a unique ending (i.e '-001')?(y/n) ") # P30906-001
+    q2=input("Does the Part have a unique ending (i.e '-001')?(y/n) ") # P30906[-001]
     if q2=="y":
         z=input("Enter ending: ")
     else:
         z=None
 
+    q3=input("Is there a minimum amount of characters?(y/n) ")         # P[000030906]
+    if q3=="y":
+        v=input("How many digits? ")
+    
+
+
     x=input("Lower limit for PN: ")
     y=input("Upper limit for PN: ")
     parts_list=range(int(x),(int(y)+1)) # P[10000]-001 to P[99999]-001
-    LaunchBrowser(parts_list,w,z)
+    LaunchBrowser(parts_list,w,z,v)
 
 
 
-def LaunchBrowser(parts_list,w,z):
+def LaunchBrowser(parts_list,w,z,v):
     chrome_options = Options()
     chrome_options.add_experimental_option("detach", True)
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -41,12 +47,12 @@ def LaunchBrowser(parts_list,w,z):
     location.send_keys("united states")
     location.send_keys(Keys.RETURN)
     #time.sleep(2)
-    Search(driver,parts_list,w,z,)
+    Search(driver,parts_list,w,z,v)
 
-def Search(driver,parts_list,w,z,):
+def Search(driver,parts_list,w,z,v):
     import platform
     for i in parts_list:
-        i=str(i).zfill(7)
+        i=str(i).zfill(v)
         try:
             driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
         except: 
