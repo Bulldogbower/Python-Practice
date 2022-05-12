@@ -44,8 +44,9 @@ def LaunchBrowser(parts_list,w,z):
     Search(driver,parts_list,w,z,)
 
 def Search(driver,parts_list,w,z,):
+    import platform
     for i in parts_list:
-        #i=str(i).zfill(7)
+        i=str(i).zfill(7)
         try:
             driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
         except: 
@@ -53,8 +54,12 @@ def Search(driver,parts_list,w,z,):
 
         try:
             elem = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')  # Find the search box
-            elem.send_keys(Keys.CONTROL,"A")
-            elem.send_keys(Keys.DELETE)
+            if platform.system() == "Windows":
+                elem.send_keys(Keys.CONTROL,"A")
+                elem.send_keys(Keys.DELETE)
+            if platform.system()=="Darwin":
+                elem.send_keys(Keys.COMMAND,"A")
+                elem.send_keys(Keys.DELETE)
             if z==None and w!=None:
                 elem.send_keys(w,i)
             if w==None and z!=None:                                                                    # If w and z are defined, send w,i,z. Else: send i
@@ -67,7 +72,7 @@ def Search(driver,parts_list,w,z,):
         except:
             pass
 
-        time.sleep(1)
+        #time.sleep(1)
 #Below finds the definition for the part number
         try:
             desc = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_gvGeneral_ctl02_lblpartdesc1').text  # Try to find the part description
