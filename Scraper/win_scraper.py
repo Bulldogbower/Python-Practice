@@ -25,7 +25,7 @@ def SearchCriteria():
 
     q3=input("Is there a minimum amount of characters?(y/n) ")         # P[000030906]
     if q3=="y":
-        v=input("How many digits? ")
+        v=int(input("How many digits? "))
     
 
 
@@ -82,7 +82,14 @@ def Search(driver,parts_list,w,z,v):
 #Below finds the definition for the part number
         try:
             desc = driver.find_element_by_id('ctl00_BodyContentPlaceHolder_gvGeneral_ctl02_lblpartdesc1').text  # Try to find the part description
-            print(w,i,z, " ; ", desc,sep="")
+            if z==None and w!=None:
+                print(w,i, " ; ", desc,sep="")
+            if w==None and z!=None:                                                                             # Send non "None" variables
+                print(i,z, " ; ", desc,sep="")
+            if w and z ==None:
+                print(i, " ; ", desc,sep="")
+            else:
+                print(w,i,z, " ; ", desc,sep="")
         except:
             pass                                                                                                # If no description field, it continues on
     print("Search Complete")
