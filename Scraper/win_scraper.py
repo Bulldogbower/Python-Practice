@@ -26,7 +26,8 @@ def SearchCriteria():
     q3=input("Is there a minimum amount of characters?(y/n) ")         # P[000030906]
     if q3=="y":
         v=int(input("How many digits? "))
-    
+    else:
+        v=None
 
 
     x=input("Lower limit for PN: ")
@@ -52,7 +53,8 @@ def LaunchBrowser(parts_list,w,z,v):
 def Search(driver,parts_list,w,z,v):
     import platform
     for i in parts_list:
-        i=str(i).zfill(v)
+        if v != None:
+            i=str(i).zfill(v)
         try:
             driver.find_element_by_id('ctl00_BodyContentPlaceHolder_SearchText_TextBox1')
         except: 
