@@ -61,6 +61,7 @@ def LaunchBrowser():
     f.close()
     driver.close()
     driver.quit()
+    
 
 
 def Logging():
@@ -106,34 +107,39 @@ def Logging():
     #Sort through each month individually, should be able to loop this, but that's a later problem
     for i in range(len(month_0)):
         if month_0[i] == 'A':
-            print(month_0[0], " has the ", month_0[i-1], " available")
+            var_1=str(month_0[0], " has the ", month_0[i-1], " available")
+            results_string.append(var_1)
             f.write(month_0[0], " has the ", month_0[i-1], " available" + "\n")
     for i in range(len(month_1)):
         if month_1[i] == 'A':
-            print(month_1[0], " has the ", month_1[i-1], " available")
+            var_1=str(month_1[0], " has the ", month_1[i-1], " available")
+            results_string.append(var_1)
             f.write(month_1[0], " has the ", month_1[i-1], " available" + "\n")
     for i in range(len(month_2)):
         if month_2[i] == 'A':
-            print(month_2[0], " has the ", month_2[i-1], " available")
+            var_1=str(month_2[0], " has the ", month_2[i-1], " available")
+            results_string.append(var_1)
             f.write(month_2[0], " has the ", month_2[i-1], " available" + "\n")
     for i in range(len(month_3)):
         if month_3[i] == 'A':
             var_1=str(month_3[0] + " has the " + month_3[i-1] + " available")
             results_string.append(var_1)
             f.write(month_3[0] + " has the " + month_3[i-1] + " available" + "\n")
+    print('results__string: ',results_string)
+    SendEmail(results_string)
 
-    #For testing
-    message=results_string[0]
-    print(message)
-    SendMessage(message)
+def SendEmail(content):
+    import yagmail
+    user = 'seanbower96@gmail.com'
+    app_password = '' # a token for gmail
+    to = 'klb170@case.edu'
+    print('Within SendEmail: ', content)
+    subject = 'Kirby Cove Availability - Sent with python'
+    # content = ['mail body content']
 
-
-def SendMessage(message):
-    import SMS
-
-    #some_text = 'Let me know if you get this email'
-
-    SMS.send(message)
+    with yagmail.SMTP(user, app_password) as yag:
+        yag.send(to, subject, content)
+        print('Sent email successfully')
 
 LaunchBrowser()
 Logging()
