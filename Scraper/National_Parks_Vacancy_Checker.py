@@ -1,14 +1,16 @@
 from contextlib import nullcontext
+from getpass import getpass
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+content=None
 
 def LaunchBrowser():
+    #Delete cotents of file and prepare it to be written
     f=open("National_Parks_Avaiability.txt", "w")
-
     #Use Firefrox browser
     driver = webdriver.Firefox()
     #Go to website
@@ -17,15 +19,12 @@ def LaunchBrowser():
     pop_up=driver.find_element_by_css_selector("button.sarsa-modal-close-button").click()
     #Click "Check-in" box to open calendar
     start_date=driver.find_element_by_css_selector("input.DateInput_input_1").click()
-    
-
     #Click to go to next page, will click later
     next_page=driver.find_element_by_class_name("sarsa-day-picker-range-controller-month-navigation-button.right")
 
     #May
     month_0=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div")
     month_0_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table")
-    month_0_days_list=[]
     #June
     month_1=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/div")
     month_1_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/table")
@@ -50,19 +49,25 @@ def LaunchBrowser():
     #Hi, here's the sleep
     sleep(2)
 
+    #I had to wait until later because these xpaths change when the next button is clicked. You'll find July is the same as August
+    #because when you click the next_page element, August takes July's position. I believe I could loop this and only look at the left
+    #calendar, but click next_page 4 times, grabbing the data between clicks
     #August
     month_3=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
     month_3_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
+    
+    #Wait time for elements to load
     driver.implicitly_wait(3)
-
-
+    #Writing the final month to the file
     f.write("Month_3:" + month_3.text + "\n" + month_3_days.text + "\n")
 
     f.close()
     driver.close()
     driver.quit()
+    Logging()
     
-
+#I originally wrote 2 separate functions and had a text file between the 2. I bet I can shorten Logging() a lot by not having it it pull from
+#the text file. That's for a later time.
 
 def Logging():
     #Open file for reading
@@ -92,6 +97,7 @@ def Logging():
     month_0=[lines[a:b]]
     #Quick way to fix it here. If you know of a better way then please show me
     month_0=month_0[0]
+    #Something I may be able to loop
     month_1=[lines[b:c]]
     month_1=month_1[0]
     month_2=[lines[c:d]]
@@ -99,6 +105,7 @@ def Logging():
     month_3=[lines[d:]]
     month_3=month_3[0]
 
+    #This will hold all of the available dates
     results_string=[]
 
     f=open("National_Parks_Avaiability.txt", "w")
@@ -106,40 +113,58 @@ def Logging():
 
     #Sort through each month individually, should be able to loop this, but that's a later problem
     for i in range(len(month_0)):
+        #This only looks for days that are labeled as "A" for available. There's a key on their website for different categories
+        #L=Lottery, EA=Early Access, FF=First come First served, #=Unavailabe. I can change it to:
+        #if i!="#":
+        #   "MONTH has the NUM available"
         if month_0[i] == 'A':
-            var_1=str(month_0[0], " has the ", month_0[i-1], " available")
+            var_1=str(" on " + month_0[i-1] + month_0[0] +  " there is availability")
             results_string.append(var_1)
-            f.write(month_0[0], " has the ", month_0[i-1], " available" + "\n")
+            f.write(" on " + month_0[i-1] + month_0[0] +  " there is availability" + "\n")
     for i in range(len(month_1)):
         if month_1[i] == 'A':
-            var_1=str(month_1[0], " has the ", month_1[i-1], " available")
+            var_1=str(" on " + month_1[i-1] + month_1[0] +  " there is availability")
             results_string.append(var_1)
-            f.write(month_1[0], " has the ", month_1[i-1], " available" + "\n")
+            f.write(" on " + month_1[i-1] + month_1[0] +  " there is availability" + "\n")
     for i in range(len(month_2)):
         if month_2[i] == 'A':
-            var_1=str(month_2[0], " has the ", month_2[i-1], " available")
+            var_1=str(" on " + month_2[i-1] + month_2[0] +  " there is availability")
             results_string.append(var_1)
-            f.write(month_2[0], " has the ", month_2[i-1], " available" + "\n")
+            f.write(" on " + month_2[i-1] + month_2[0] +  " there is availability" + "\n")
     for i in range(len(month_3)):
         if month_3[i] == 'A':
-            var_1=str(month_3[0] + " has the " + month_3[i-1] + " available")
+            var_1=str(" on " + month_3[i-1] + month_3[0] + " there is availability")
             results_string.append(var_1)
-            f.write(month_3[0] + " has the " + month_3[i-1] + " available" + "\n")
-    print('results__string: ',results_string)
+            f.write(" on " + month_3[i-1] + month_3[0] + " there is availability" + "\n")
+    # DetectDifferences(results_string)
     SendEmail(results_string)
 
 def SendEmail(content):
     import yagmail
-    user = 'seanbower96@gmail.com'
-    app_password = '' # a token for gmail
-    to = 'klb170@case.edu'
-    print('Within SendEmail: ', content)
+    #Your email, must enable "less secure apps" within Gmail
+    user = input("What email address do you want to send from? ")
+    #Your password
+    app_password = getpass(prompt='Password: ', stream=None)
+    #Recipient of your email
+    to = input("Who do you want to send an email to? ")
+    #Email subject
     subject = 'Kirby Cove Availability - Sent with python'
+    #Change below text if you want to hard-code the message
     # content = ['mail body content']
 
     with yagmail.SMTP(user, app_password) as yag:
         yag.send(to, subject, content)
         print('Sent email successfully')
+    Hold(content)
+
+def Hold(content):
+    sleep(1800)
+    LaunchBrowser()
+
+# def DetectDifferences(prev_results):
+#     if prev_results==content:
+#         Hold()
+#     else:
+#         SendEmail(content)
 
 LaunchBrowser()
-Logging()
