@@ -10,7 +10,7 @@ content=None
 
 def LaunchBrowser():
     #Delete cotents of file and prepare it to be written
-    f=open("National_Parks_Avaiability.txt", "w")
+    f=open("KirbyCoveAvailability.txt", "w")
     #Use Firefrox browser
     driver = webdriver.Firefox()
     #Go to website
@@ -71,7 +71,7 @@ def LaunchBrowser():
 
 def Logging():
     #Open file for reading
-    f=open("National_Parks_Avaiability.txt")
+    f=open("KirbyCoveAvailability.txt")
 
     #Read it line by line
     lines=f.readlines()
@@ -110,7 +110,7 @@ def Logging():
     #This will hold all of the available dates
     results_string=[]
 
-    f=open("National_Parks_Avaiability.txt", "w")
+    f=open("KirbyCoveAvailability.txt", "w")
     #f=open("output.txt", "w")
 
     #Sort through each month individually, should be able to loop this, but that's a later problem
