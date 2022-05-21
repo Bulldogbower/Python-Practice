@@ -72,9 +72,12 @@ def LaunchBrowser():
 def Logging():
     #Open file for reading
     f=open("National_Parks_Avaiability.txt")
+
     #Read it line by line
     lines=f.readlines()
+
     converted_list = []
+
     #To get rid of "\n"
     for i in lines:
         converted_list.append(i.strip())
@@ -91,7 +94,6 @@ def Logging():
             c=int(i)
         if lines[i].__contains__("Month_3"):
             d=int(i)
-
 
     #I accidentally created nested lists [[1,2,3],[4,5,6]]
     month_0=[lines[a:b]]
@@ -137,7 +139,10 @@ def Logging():
             results_string.append(var_1)
             f.write(" on " + month_3[i-1] + month_3[0] + " there is availability" + "\n")
     # DetectDifferences(results_string)
+    
+    
     SendEmail(results_string)
+    
 
 def SendEmail(content):
     import yagmail
@@ -151,6 +156,7 @@ def SendEmail(content):
     subject = 'Kirby Cove Availability - Sent with python'
     #Change below text if you want to hard-code the message
     # content = ['mail body content']
+    
 
     with yagmail.SMTP(user, app_password) as yag:
         yag.send(to, subject, content)
@@ -158,8 +164,8 @@ def SendEmail(content):
     Hold(content)
 
 def Hold(content):
-    sleep(1800)
-    LaunchBrowser()
+    sleep(10)
+    LaunchBrowser(content)
 
 # def DetectDifferences(prev_results):
 #     if prev_results==content:
