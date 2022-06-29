@@ -223,12 +223,9 @@ def SendEmail(content):
     subject = 'Kirby Cove Availability - Sent with python'
     #Change below text if you want to hard-code the message
     # content = ['mail body content']
-    try:
-        with yagmail.SMTP(user, app_password) as yag:
-            yag.send(to, subject, content)
-            print('Sent email successfully')
-    except:
-        print("Email failed, check settings")
+    with yagmail.SMTP(user, app_password) as yag:
+        yag.send(to, subject, content)
+        print('Sent email successfully')
     Hold()
 
 def Hold():
