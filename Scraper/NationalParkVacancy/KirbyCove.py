@@ -63,6 +63,9 @@ def LaunchBrowser(driver):
     f.write(month_0.text + "\n" + month_0_days.text + "\n")
     f.write(month_1.text + "\n" + month_1_days.text + "\n")
     f.write(month_2.text + "\n" + month_2_days.text + "\n")
+    
+    #month_0 wasn't being sent to Logging() because it was overwritten when the next arrow was clicked.
+    #I made all the months the same so the code is neater.
     month_0=month_0.text
     month_1=month_1.text
     month_2=month_2.text
@@ -92,12 +95,15 @@ def LaunchBrowser(driver):
     f.write(month_3.text + "\n" + month_3_days.text + "\n")
     month_3=month_3.text
     f.close()
+
+    #I don't want to close the browser, only refresh
     #driver.close()
     #driver.quit()
+
     Logging(month_0,month_1,month_2,month_3)
     
-#I originally wrote 2 separate functions and had a text file between the 2. I bet I can shorten Logging() a lot by not having it it pull from
-#the text file. That's for a later time.
+#I originally wrote 2 separate functions and had a text file between the 2. I bet I can shorten Logging() a lot by not having it it 
+#pull from the text file. That's for a later time.
 
 def Logging(month_0,month_1,month_2,month_3):
     #Open file for reading
@@ -111,12 +117,10 @@ def Logging(month_0,month_1,month_2,month_3):
         converted_list.append(i.rstrip())
     lines=converted_list
     f.close()
-    #Sorting the months into seperate lists, starting with a string I hard coded "Month_x:$MONTH_NAME YYYY " 
+    #Sorting the months into seperate lists, starting with month_X.text from LaunchBrowser() 
     for i in range(len(lines)):
         if lines[i].__contains__(month_0):
             a=int(i)
-            #print("May is here ", str(i))
-            #print(month_0.text)
         if lines[i].__contains__(month_1):
             b=int(i)
         if lines[i].__contains__(month_2):
@@ -142,7 +146,6 @@ def Logging(month_0,month_1,month_2,month_3):
 
     from datetime import datetime
     import calendar
-    print(month_0)
     #Sort through each month individually, should be able to loop this, but that's a later problem
     for i in range(len(month_0)):
         #This only looks for days that are labeled as "A" for available. There's a key on their website for different categories
@@ -190,6 +193,8 @@ def DetectDifferences(current):
 
     f2=open("comparison.txt", "r")
     lines2=f2.readlines()
+
+    print("prev: ", lines2, "\n" , "current: ", lines)
 
     if lines==lines2:
         print("No update at this time")
