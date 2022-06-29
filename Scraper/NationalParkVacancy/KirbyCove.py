@@ -38,15 +38,20 @@ def LaunchBrowser(driver):
     except:
         print("No pop-up Window found, continuing")
         pass
-    #Click "Check-in" box to open calendar
-    start_date=driver.find_element_by_css_selector("input.DateInput_input_1").click()
-    #Click to go to next page, will click later
+    try:
+        #Click "Check-in" box to open calendar
+        start_date=driver.find_element_by_css_selector("input.DateInput_input_1").click()
+    except:
+        #If the driver cannot find the check in box, restart at LaunchBrowser
+        print("Could not find check-in box, restarting")
+        LaunchBrowser(driver)
+
+    #Find next page button, will click later
     next_page=driver.find_element_by_class_name("sarsa-day-picker-range-controller-month-navigation-button.right")
 
     #May
     month_0=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div")
     month_0_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table")
-    print(month_0)
     #June
     month_1=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/div")
     month_1_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/table")
@@ -61,6 +66,7 @@ def LaunchBrowser(driver):
     month_0=month_0.text
     month_1=month_1.text
     month_2=month_2.text
+
     #Tell firefox to wait for the page to load, then 3s. I don't think it works so I added a sleep later
     driver.implicitly_wait(3)
     
@@ -75,7 +81,7 @@ def LaunchBrowser(driver):
 
     #I had to wait until later because these xpaths change when the next button is clicked. You'll find July is the same as August
     #because when you click the next_page element, August takes July's position. I believe I could loop this and only look at the left
-    #calendar, but click next_page 4 times, grabbing the data between clicks
+    #calendar and click next_page 4 times, grabbing the data between clicks
     #August
     month_3=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
     month_3_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
@@ -141,8 +147,8 @@ def Logging(month_0,month_1,month_2,month_3):
     for i in range(len(month_0)):
         #This only looks for days that are labeled as "A" for available. There's a key on their website for different categories
         #L=Lottery, EA=Early Access, FF=First come First served, #=Unavailabe. I can change it to:
-        #if i!="#":
-        #   "MONTH has the NUM available"
+        #if i!="xx":
+        #   "On WEEKDAY NUM MONTH YEAR there is availability"
         if month_0[i] == 'A':
             date_for_weekday=(str(month_0[i-1]) + " " + str(month_0[0]))
             datetime_object = datetime.strptime(date_for_weekday, '%d %B %Y')
@@ -202,7 +208,7 @@ def DetectDifferences(current):
 
 def SendEmail(content):
     import yagmail
-    #Your email, must enable "less secure apps" within Gmail
+    #Your email. Must enable "less secure apps" within Gmail
     #user = input("What email address do you want to send from? ")
     #Your password
     #app_password = getpass(prompt='Password: ', stream=None)
@@ -212,9 +218,12 @@ def SendEmail(content):
     subject = 'Kirby Cove Availability - Sent with python'
     #Change below text if you want to hard-code the message
     # content = ['mail body content']
-    with yagmail.SMTP(user, app_password) as yag:
-        yag.send(to, subject, content)
-        print('Sent email successfully')
+    try:
+        with yagmail.SMTP(user, app_password) as yag:
+            yag.send(to, subject, content)
+            print('Sent email successfully')
+    except:
+        print("Email failed, check settings")
     Hold()
 
 def Hold():
