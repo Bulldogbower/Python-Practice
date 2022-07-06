@@ -1,26 +1,51 @@
-from contextlib import nullcontext
-from getpass import getpass
+from getpass import getpass #To get password, not in cleartext
 from time import sleep
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
+import platform    # For getting the operating system name
+import subprocess  # For executing a shell command
 
 content=None
 
 
 #Your email, must enable "less secure apps" within Gmail
-user = input("What email address do you want to send from? ")
+#user = input("What email address do you want to send from? ")
 #Your password
-app_password = getpass(prompt='Password: ', stream=None)
+#app_password = getpass(prompt='Password: ', stream=None)
 #Recipient of your email
-to = input("Who do you want to send an email to? ")
+#to = input("Who do you want to send an email to? ")
 
 
 #Use Firefrox browser
 options = Options()
+#Headless means you won't see the browser
 options.headless = True
 driver = webdriver.Firefox(options=options)
 
+
+
+host="recreation.gov"
+def ping(host):
+    """
+    Returns True if host (str) responds to a ping request.
+    Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
+    """
+
+    # Option for the number of packets as a function of
+    param = '-n' if platform.system().lower()=='windows' else '-c'
+
+    # Building the command. Ex: "ping -c 1 google.com"
+    command = ['ping', param, '1', host]
+
+    net_stat=subprocess.call(command) == 0
+    if net_stat==True:
+        print("Network Alive, continuing")
+        LaunchBrowser(driver)
+    else:
+        print("Network Down, waiting")
+        Hold()
+    #return net_stat
 
 
 
@@ -29,36 +54,39 @@ def LaunchBrowser(driver):
     #Go to website
     driver.get("https://www.recreation.gov/camping/campgrounds/232491")
 
+    sleep(2)
+
     #Delete cotents of file and prepare it to be written
     f=open("KirbyCoveAvailability.txt", "w")
 
     #Close pop-up
     try:
-        pop_up=driver.find_element_by_css_selector("button.sarsa-modal-close-button").click()
+        pop_up=driver.find_element(by=By.CLASS_NAME, value="sarsa-modal-close-button")
+        pop_up.click()
     except:
         print("No pop-up Window found, continuing")
         pass
     try:
         #Click "Check-in" box to open calendar
-        start_date=driver.find_element_by_css_selector("input.DateInput_input_1").click()
+        start_date=driver.find_element(by=By.CLASS_NAME, value="DateInput_input_1")
+        start_date.click()
     except:
         #If the driver cannot find the check in box, restart at LaunchBrowser
         print("Could not find check-in box, restarting")
         LaunchBrowser(driver)
 
     #Find next page button, will click later
-    next_page=driver.find_element_by_class_name("sarsa-day-picker-range-controller-month-navigation-button.right")
-
+    next_page=driver.find_element(by=By.CLASS_NAME, value="sarsa-day-picker-range-controller-month-navigation-button.right")
     #May
-    month_0=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div")
-    month_0_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table")
+    month_0=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div")
+    month_0_days=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table")
     #June
-    month_1=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/div")
-    month_1_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/table")
+    month_1=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/div")
+    month_1_days=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/table")
     #July
-    month_2=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
-    month_2_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
-    
+    month_2=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
+    month_2_days=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
+
     #I'm writing the 3 viewable months to the text file. I have to add the 4th month later. I'll explain later.
     f.write(month_0.text + "\n" + month_0_days.text + "\n")
     f.write(month_1.text + "\n" + month_1_days.text + "\n")
@@ -86,19 +114,17 @@ def LaunchBrowser(driver):
     #because when you click the next_page element, August takes July's position. I believe I could loop this and only look at the left
     #calendar and click next_page 4 times, grabbing the data between clicks
     #August
-    month_3=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
-    month_3_days=driver.find_element_by_xpath("/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
+    month_3=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/div")
+    month_3_days=driver.find_element(by=By.XPATH, value="/html/body/div[1]/div/div[3]/div/div[2]/div/div[4]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div/table")
     
     #Wait time for elements to load
     driver.implicitly_wait(3)
+    
     #Writing the final month to the file
     f.write(month_3.text + "\n" + month_3_days.text + "\n")
     month_3=month_3.text
     f.close()
 
-    #I don't want to close the browser, only refresh
-    #driver.close()
-    #driver.quit()
 
     Logging(month_0,month_1,month_2,month_3)
     
@@ -206,7 +232,8 @@ def DetectDifferences(current):
         for i in lines:
             f2.write(str(i))
         f2.close()
-        SendEmail(current)
+        #Commenting out for testing
+        #SendEmail(current)
 
 
 
@@ -223,6 +250,7 @@ def SendEmail(content):
     subject = 'Kirby Cove Availability - Sent with python'
     #Change below text if you want to hard-code the message
     # content = ['mail body content']
+    # content = ['mail body content']
     with yagmail.SMTP(user, app_password) as yag:
         yag.send(to, subject, content)
         print('Sent email successfully')
@@ -231,6 +259,6 @@ def SendEmail(content):
 def Hold():
     print("Sleeing for 30 minutes")
     sleep(1800)
-    LaunchBrowser(driver)
+    ping(host)
 
-LaunchBrowser(driver)
+ping(host)
